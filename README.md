@@ -1,1 +1,1 @@
-# discord-starfinder-bot
+# Discord TTRPG Helper Bot
