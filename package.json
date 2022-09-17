@@ -17,7 +17,12 @@
     "node-fetch": "^3.2.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsdoc": "^39.3.6",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
   },
   "homepage": "https://github.com/ravewebdev/discord-ttrpg-bot/blob/main/README.md",
   "repository": {
