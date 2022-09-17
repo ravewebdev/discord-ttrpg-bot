@@ -5,8 +5,11 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "format": "npx prettier '**/*.{js,jsx,ts,tsx,md,json,yml}' --write || true",
+    "lint": "npm run format && npm run lint:js",
+    "lint:js": "npx eslint '**/*.{js,ts,jsx,tsx}' --fix || true",
+    "start": "node app.js"
   },
   "author": "Rae Van Epps <rave@ravewebdev.com>",
   "license": "GPL-3.0-or-later",
