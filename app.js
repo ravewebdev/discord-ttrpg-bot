@@ -1,5 +1,6 @@
 import 'dotenv/config'
 import express from 'express'
+import {ALL_COMMANDS, registerGuildCommands} from './lib/commands.js'
 import {verifyDiscordRequest} from './lib/requests.js'
 import {handleInteractions} from './lib/utils.js'
 
@@ -15,6 +16,8 @@ app.use(express.json({verify: verifyDiscordRequest(process.env.PUBLIC_KEY)}))
 // Handle interaction requests.
 app.post('/interactions', handleInteractions)
 
+// Listen for changes.
+app.listen(PORT, () => {
+  // Register commands to the specified guild.
+  registerGuildCommands(process.env.APP_ID, process.env.GUILD_ID, ALL_COMMANDS)
 })
-
-app.listen(PORT, () => {})
