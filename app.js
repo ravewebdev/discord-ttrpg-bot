@@ -2,7 +2,7 @@ import 'dotenv/config'
 import express from 'express'
 import {
   handleInteractions,
-  VerifyDiscordRequest
+  verifyDiscordRequest
 } from './lib/utils.js'
 
 // Create express app.
@@ -12,7 +12,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 // Parse request body and verify incoming requests via discord-interactions.
-app.use(express.json({verify: VerifyDiscordRequest(process.env.PUBLIC_KEY)}))
+app.use(express.json({verify: verifyDiscordRequest(process.env.PUBLIC_KEY)}))
 
 // Handle interaction requests.
 app.post('/interactions', handleInteractions)
