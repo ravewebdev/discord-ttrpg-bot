@@ -1,9 +1,7 @@
 import 'dotenv/config'
 import express from 'express'
-import {
-  handleInteractions,
-  verifyDiscordRequest
-} from './lib/utils.js'
+import {verifyDiscordRequest} from './lib/requests.js'
+import {handleInteractions} from './lib/utils.js'
 
 // Create express app.
 const app = express()
